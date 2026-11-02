@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>小测验：检查一下你读懂了多少</title>
+  <meta name="description" content="5 道单选题，覆盖 Web3、钱包、DID、可验证凭证和常见误解，答完可展开答案与解释。">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <p class="site-title">Web3 与 DID：给普通人的入门课</p>
+    <p class="site-tagline">不用懂密码学，也能看懂的 Web3 与去中心化身份入门。</p>
+  </header>
+
+  <nav class="site-nav" aria-label="主导航">
+    <ul>
+      <li><a href="index.html">首页</a></li>
+      <li><a href="what-is-web3.html">什么是 Web3</a></li>
+      <li><a href="what-is-did.html">什么是 DID</a></li>
+      <li><a href="web3-and-did.html">Web3 与 DID 的关系</a></li>
+      <li><a href="glossary.html">术语表</a></li>
+      <li><a href="quiz.html" aria-current="page">小测验</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <h1>小测验</h1>
+    <p>
+      这只是自测：不计分、不记录，答错也没关系。
+      先自己选一个，再展开下方的「查看答案」对照解释；有拿不准的地方，回到对应文章或<a href="glossary.html">术语表</a>再看一遍就好。
+    </p>
+
+    <section aria-labelledby="q1-heading">
+      <h2 id="q1-heading">第 1 题：Web2 和 Web3 最关键的区别是什么？</h2>
+      <fieldset>
+        <legend>请选择一个答案</legend>
+        <p><label><input type="radio" name="q1"> A. 网页打开的速度更快</label></p>
+        <p><label><input type="radio" name="q1"> B. 账号和数据的所有权掌握在谁手里</label></p>
+        <p><label><input type="radio" name="q1"> C. 网站只能用英文来写</label></p>
+      </fieldset>
+      <details>
+        <summary>查看答案</summary>
+        <p>正确答案：B。Web3 想做的，是把账号、数据和所有权从平台手里交回给用户，而不是提升网速或限制语言。</p>
+      </details>
+    </section>
+
+    <section aria-labelledby="q2-heading">
+      <h2 id="q2-heading">第 2 题：自托管钱包真正保管的核心是什么？</h2>
+      <fieldset>
+        <legend>请选择一个答案</legend>
+        <p><label><input type="radio" name="q2"> A. 钱包里存着的现金</label></p>
+        <p><label><input type="radio" name="q2"> B. 只有你自己知道的私钥</label></p>
+        <p><label><input type="radio" name="q2"> C. 平台的登录密码</label></p>
+      </fieldset>
+      <details>
+        <summary>查看答案</summary>
+        <p>正确答案：B。资产记在链上，钱包保管的是用来签字的私钥；谁拿到私钥，谁就控制这份资产。</p>
+      </details>
+    </section>
+
+    <section aria-labelledby="q3-heading">
+      <h2 id="q3-heading">第 3 题：关于 DID（去中心化身份），下面哪一句最准确？</h2>
+      <fieldset>
+        <legend>请选择一个答案</legend>
+        <p><label><input type="radio" name="q3"> A. 由你自己持有、不挂在某家公司名下的身份标识</label></p>
+        <p><label><input type="radio" name="q3"> B. 一种必须实名的社交平台账号</label></p>
+        <p><label><input type="radio" name="q3"> C. 一张存在手机里的身份证照片</label></p>
+      </fieldset>
+      <details>
+        <summary>查看答案</summary>
+        <p>正确答案：A。DID 的核心是身份不由单一平台发放和保管；它也不等于绝对匿名，该实名的场合仍然要实名。</p>
+      </details>
+    </section>
+
+    <section aria-labelledby="q4-heading">
+      <h2 id="q4-heading">第 4 题：对方验证一份可验证凭证（VC）时，主要靠什么？</h2>
+      <fieldset>
+        <legend>请选择一个答案</legend>
+        <p><label><input type="radio" name="q4"> A. 打电话回签发机构逐条确认</label></p>
+        <p><label><input type="radio" name="q4"> B. 用签发方的公钥验证凭证上的数字签名</label></p>
+        <p><label><input type="radio" name="q4"> C. 看凭证图片上有没有防伪水印</label></p>
+      </fieldset>
+      <details>
+        <summary>查看答案</summary>
+        <p>正确答案：B。签名能证明内容没有被篡改、确实由签发方发出，所以验证时不必每次都回去找原机构。</p>
+      </details>
+    </section>
+
+    <section aria-labelledby="q5-heading">
+      <h2 id="q5-heading">第 5 题：下面哪一句是常见的误解？</h2>
+      <fieldset>
+        <legend>请选择一个答案</legend>
+        <p><label><input type="radio" name="q5"> A. 私钥丢了可以找客服「找回密码」</label></p>
+        <p><label><input type="radio" name="q5"> B. DID 不等于绝对匿名</label></p>
+        <p><label><input type="radio" name="q5"> C. 支持选择性披露的凭证可以只出示部分信息</label></p>
+      </fieldset>
+      <details>
+        <summary>查看答案</summary>
+        <p>正确答案：A。自托管身份没有客服、密保问题和短信验证码，私钥丢失通常意味着永久失去对身份和资产的控制。</p>
+      </details>
+    </section>
+
+    <p>
+      答完可以回到<a href="index.html">学习路径</a>，按顺序重读没把握的章节，或直接去<a href="what-is-web3.html">什么是 Web3</a>、<a href="what-is-did.html">什么是 DID</a>、<a href="web3-and-did.html">Web3 与 DID 的关系</a>复习。
+    </p>
+  </main>
+
+  <footer class="site-footer">
+    <p>本站为演示项目，内容仅用于说明站点结构，不构成任何投资或技术建议。</p>
+  </footer>
+</body>
+</html>
