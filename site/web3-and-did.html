@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Web3 与 DID 的关系</title>
+  <meta name="description" content="Web3 管资产和规则，DID 管身份；两者如何配合，以及各自的局限。">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <p class="site-title">Web3 与 DID：给普通人的入门课</p>
+    <p class="site-tagline">不用懂密码学，也能看懂的 Web3 与去中心化身份入门。</p>
+  </header>
+
+  <nav class="site-nav" aria-label="主导航">
+    <ul>
+      <li><a href="index.html">首页</a></li>
+      <li><a href="what-is-web3.html">什么是 Web3</a></li>
+      <li><a href="what-is-did.html">什么是 DID</a></li>
+      <li><a href="web3-and-did.html" aria-current="page">Web3 与 DID 的关系</a></li>
+      <li><a href="glossary.html">术语表</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <h1>Web3 与 DID：一个管账本，一个管身份</h1>
+
+    <p>
+      Web3 和 DID 常一起出现，分工却不同：Web3 解决「资产和规则由谁控制」，DID 解决「身份由谁控制」。
+    </p>
+
+    <h2>一、两个问题，两套工具</h2>
+    <p>
+      Web3 的主角是共同维护的账本：谁持有多少、按什么规则转移，都写在链上。
+      钱包和私钥管的是「这笔资产能不能动」。
+    </p>
+    <p>
+      DID 的主角是身份：DID 是别人引用你的字符串，DID 文档是它的公开档案，放着公钥；可验证凭证是机构签发的证明。
+      私钥管的是「这个身份是不是你在用」。
+    </p>
+    <p>
+      地址像门牌号，可公开收款；DID 更像身份证号，用来证明「我是我」。两者常一起用，比如在链上登记 DID 文档、
+      用钱包保管凭证，但也能分开：DID 的登记处不一定非是区块链。
+    </p>
+
+    <h2>二、出示一次可验证凭证，发生了什么</h2>
+    <ol>
+      <li><strong>凭证在钱包里。</strong>学校把学历、专业和签发时间写成一份可验证凭证，签名后交给你保管。</li>
+      <li><strong>网站发起请求。</strong>招聘方说：只要学历和专业，不要姓名、生日。</li>
+      <li><strong>你只出示需要的字段。</strong>确认后只交「本科、计算机」两项。这要求凭证支持可选择性披露，否则会带出全部字段。</li>
+      <li><strong>网站通过 DID 文档验证签名。</strong>解析签发方的 DID 文档，用里面的公钥验签，再核对有效期和吊销状态。</li>
+      <li><strong>不需要联系发证机构。</strong>学校全程不知情，也不必为每次验证开接口。信任来自签名和公开档案。</li>
+    </ol>
+
+    <h2>三、两个具体场景</h2>
+
+    <h3>求职与学历验证</h3>
+    <p>
+      今天交截图、验证报告，或等 HR 打电话。截图能改，报告会过期。
+      换成凭证，招聘方验签名，几秒出结果，也不用交出整份成绩单。
+    </p>
+
+    <h3>KYC：只证明「已成年」</h3>
+    <p>
+      开户、买酒都要证明年龄，传统做法是拍身份证，生日、住址全被看光。
+      用零知识证明，钱包能生成「已满十八岁」的派生证明：对方确认结论来自有效签名，却拿不到出生日期。
+    </p>
+
+    <h2>四、局限与风险</h2>
+    <ul>
+      <li><strong>私钥管理。</strong>丢了没有「找回密码」，身份和凭证一起失去；交给托管又回到依赖平台。社交恢复是折中，但恢复过程也可能被利用。</li>
+      <li><strong>凭证吊销。</strong>验签只证明签发时是真的。证书被撤销、卡过期，要靠吊销列表或状态查询；名单不及时，结论就会错。</li>
+      <li><strong>隐私元数据。</strong>字段藏住了，痕迹还在：何时向谁出示、用的哪个 DID，都可能被关联。地址是化名，不是隐身。</li>
+      <li><strong>监管与互操作。</strong>各家的披露格式、DID 方法和吊销机制不统一，跨厂商常对不上；监管要求可追溯时，纯自持身份也会撞墙。</li>
+    </ul>
+
+    <h2>五、小结</h2>
+    <p>
+      合起来记：Web3 让账本不锁在一家公司手里，DID 让身份不锁在一个平台账号里。两者可搭着用，也可各用各的。
+    </p>
+    <p>
+      可回<a href="what-is-web3.html">什么是 Web3</a>或<a href="what-is-did.html">什么是 DID</a>对照阅读；不熟的词查<a href="glossary.html">术语表</a>。
+    </p>
+  </main>
+
+  <footer class="site-footer">
+    <p>本站为演示项目，内容仅用于说明站点结构，不构成任何投资或技术建议。</p>
+  </footer>
+</body>
+</html>
